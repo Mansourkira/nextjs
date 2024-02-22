@@ -1,4 +1,4 @@
-let API = [
+let api = [
   {
     Question: "Quel est votre genre?",
     Options: ["Masculin", "Féminin"],
@@ -60,4 +60,4 @@ let API = [
   // Continue with the rest of the questions...
 ];
 
-export default API;
+export default api;
