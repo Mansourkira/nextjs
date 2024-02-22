@@ -52,8 +52,8 @@ export function WelcomeSection() {
 							}}
 						>
 							<p>
-								Hi, I'm <mark>Mansour</mark>, a <mark>Full stack</mark> developer with a passion for
-								crafting innovative solutions.
+								Hi, I&apos;m <mark>Mansour</mark>, a <mark>Full stack</mark> developer with a
+								passion for crafting innovative solutions.
 							</p>
 						</h1>
 
