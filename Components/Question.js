@@ -1,27 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Inc, Dec, UserSelecOption, ShowResult } from "../Reducer/Actions";
-
+import api from "../api";
 const Question = () => {
   const [index, setIndex] = useState(0); // Initialize index state
   const dispatch = useDispatch();
   const stats = useSelector((state) => state.Reducer);
-  const api = [
-    {
-      Question: "Sample Question 1",
-      Options: ["Option 1", "Option 2", "Option 3"],
-      Answer: 0,
-    },
-    {
-      Question: "Sample Question 2",
-      Options: ["Option 1", "Option 2", "Option 3"],
-      Answer: 1,
-    },
-    // Add more questions as needed
-  ];
 
   useEffect(() => {
-    // Update index and state based on user's selection
     if (stats.UserArray[index] != null) {
       setIndex(stats.UserArray[index]);
     }
@@ -33,18 +19,18 @@ const Question = () => {
 
   const handlePrevious = () => {
     if (index > 0) {
-      dispatch(Dec()); // Dispatch action to decrement index
+      dispatch(Dec());
     }
   };
 
   const handleNext = () => {
     if (index < api.length - 1) {
-      dispatch(Inc()); // Dispatch action to increment index
+      dispatch(Inc());
     }
   };
 
   const handleSubmit = () => {
-    dispatch(ShowResult()); // Dispatch action to show result
+    dispatch(ShowResult());
   };
 
   return (
