@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Inc, Dec, UserSelecOption, ShowResult } from "../Reducer/Actions";
-import api from "../api";
+import api from "../API";
 const Question = () => {
   const [index, setIndex] = useState(0); // Initialize index state
   const dispatch = useDispatch();
